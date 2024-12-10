@@ -23,7 +23,7 @@ public interface HNCommandIO {
         return permission == null || sender.hasPermission(permission);
     }
 
-    default Component getDescription() {
-        return Component.text(" ");
+    default String getDescription() {
+        return null;
     }
 }
