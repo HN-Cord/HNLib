@@ -1,6 +1,5 @@
 package hn.blacknight0981.hNLib.commands;
 
-import net.kyori.adventure.text.Component;
 import org.bukkit.command.CommandSender;
 
 import java.util.List;
