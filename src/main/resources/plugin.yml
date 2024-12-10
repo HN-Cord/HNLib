@@ -1,0 +1,12 @@
+name: HNLib
+version: '0.0.1-Damo'
+main: hn.blacknight0981.hNLib.HNLib
+api-version: '1.21'
+authors: [ HN ]
+
+commands:
+  hn:
+    description: 主指令
+    usage: /hn <subcommand> [args]
+    permission: hn.command
+    permission-message: "你沒有權限使用此命令"
