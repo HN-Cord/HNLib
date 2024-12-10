@@ -1,5 +1,7 @@
 package hn.blacknight0981.hNLib.commands;
 
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.command.CommandSender;
 
 import java.util.HashMap;
@@ -15,7 +17,7 @@ public class HNCommandManager {
     public static boolean execute(String name, CommandSender sender, String[] args) {
         HNCommandIO command = commands.get(name.toLowerCase());
         if (command == null) {
-            sender.sendMessage("未知的子指令: " + name);
+            sender.sendMessage(Component.text("未知的子指令: " + name).color(NamedTextColor.RED));
             return true;
         }
         return command.execute(sender, args);
