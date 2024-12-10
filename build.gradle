@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'hn.blacknight0981'
-version = '0.0.1-Damo'
+version = '0.0.2-Damo'
 
 repositories {
     mavenCentral()

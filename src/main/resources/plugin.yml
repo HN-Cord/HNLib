@@ -1,5 +1,5 @@
 name: HNLib
-version: '0.0.1-Damo'
+version: '0.0.2-Damo'
 main: hn.blacknight0981.hNLib.HNLib
 api-version: '1.21'
 authors: [ HN ]

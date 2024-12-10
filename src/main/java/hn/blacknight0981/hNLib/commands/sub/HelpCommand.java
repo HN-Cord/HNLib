@@ -1,7 +1,7 @@
 package hn.blacknight0981.hNLib.commands.sub;
 
+import hn.blacknight0981.hNLib.HNLib;
 import hn.blacknight0981.hNLib.commands.HNCommandIO;
-import hn.blacknight0981.hNLib.commands.HNCommandManager;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.JoinConfiguration;
 import net.kyori.adventure.text.format.NamedTextColor;
@@ -25,7 +25,7 @@ public class HelpCommand implements HNCommandIO {
     public boolean execute(CommandSender sender, String[] args) {
         List<Component> commandLines = new ArrayList<>();
 
-        HNCommandManager.getCommands().forEach((name, command) -> {
+        HNLib.getCommandManager().getCommands().forEach((name, command) -> {
             if (command.hasPermission(sender)) {
                 String description = command.getDescription();
                 if (description == null) {

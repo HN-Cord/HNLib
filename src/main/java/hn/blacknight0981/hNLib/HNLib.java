@@ -8,9 +8,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class HNLib extends JavaPlugin {
 
+    private static HNCommandManager commandManager;
+
     @Override
     public void onEnable() {
         getLogger().info("HNLib 加載中...");
+        commandManager = new HNCommandManager();
 
         PluginCommand command = getCommand("hn");
         if (command != null) {
@@ -18,7 +21,7 @@ public final class HNLib extends JavaPlugin {
             command.setTabCompleter(new HNCommand());
         }
 
-        HNCommandManager.register(new HelpCommand());
+        commandManager.register(new HelpCommand());
 
         getLogger().info("HNLib 加載完畢...");
     }
@@ -28,5 +31,9 @@ public final class HNLib extends JavaPlugin {
         getLogger().info("HNLib 關閉中...");
 
         getLogger().info("HNLib 關閉完畢...");
+    }
+
+    public static HNCommandManager getCommandManager() {
+        return commandManager;
     }
 }
